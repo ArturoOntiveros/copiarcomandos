@@ -1,0 +1,137 @@
+a
+	text-decoration: none
+body
+	margin: 0
+	padding: 0
+	font-family: 'Roboto', sans-serif
+	font-size: 16px
+figure
+	margin: 0
+	padding: 0
+.artista
+	width: 31%
+	&__flex
+		justify-content: space-between
+		display: flex
+		flex-wrap: wrap
+	&__imagen
+		img
+			width: 100%
+			border-radius: 50%
+	&__nombre
+		h2
+			font-size: 2rem
+			text-align: center
+			margin: 0.3rem 0 0 0
+	&__canciones
+		p
+			font-size: 1.5rem
+			color: #6E6E6E
+			text-align: center
+			margin: 0 0 1.8rem 0
+footer
+	p
+		text-align: center
+.body
+	position: relative
+	top: 4rem
+	&__titulo
+		font-size: 2.8rem
+		margin: 0.8rem 0
+.top-space
+	margin-top: 5rem
+.button
+	box-shadow: inset 0 0 1px rgba(0,0,0,.3)
+	padding: 0.2rem 1rem
+	border-radius: 500px
+	background-color: #fff
+	color: #7F8C8D
+	&:hover
+		background: #02b875
+		color: #fff
+.header
+	position: fixed
+	top: 0rem
+	width: 100%
+	box-shadow: 0 1px 2px rgba(0,0,0,.1),0 -1px 0 rgba(0,0,0,.02)
+	padding: 0.8rem 0
+	z-index: 100
+	background: white
+	&__flex
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__perfil
+		width: 2rem
+		img
+			width: 100%
+			border-radius: 50%
+	&__nav
+		cursor: pointer
+		&:before
+			font-size: 1.5rem
+			position: relative
+			top: 0.2rem
+.nav
+	z-index: 10000
+	position: fixed
+	width: 100%
+	top: 3.9rem
+	background: white
+	display: none
+	ul
+		margin: 0
+		padding: 0
+		li
+			list-style: none
+			text-align: center
+			padding-top: 0.5rem
+			font-size: 0.9rem
+			&:nth-child(6)
+				padding-bottom: 0.5rem
+			a
+				display: block
+				color: #000
+.top
+	h3
+		margin: 0
+		font-size: 0.8rem
+	p
+		margin: 0
+		font-size: 0.7rem
+	&__album
+		padding-left: 1rem
+	&__portada
+		width: 40px
+		img
+			width: 100%
+			height: 40px
+			border-radius: 0.3rem
+	&__info
+		padding-left: 1rem
+	&__flex
+		display: flex
+		padding: 1rem 0
+		box-shadow: 0 1px 2px rgba(0,0,0,.1),0 -1px 0 rgba(0,0,0,.02)
+		&:hover
+			background: #f2f2f2
+.wrapper
+	max-width: 1380px
+	width: 95%
+	margin: 0 auto
+//- Inicio
+.inicio
+	.inicio__musica
+		background-image: url('../img/musica.jpg')
+	.inicio__artista
+		background-image: url('../img/artistas.jpg')
+	.inicio__musica, .inicio__artista
+		background-size: cover
+		padding: 10rem 0 8rem 0
+		text-align: center
+		h1
+			color: #fff
+			margin: 0
+		p
+			color: #fff
+			margin: 4rem

@@ -1,0 +1,2 @@
+module IndnewHelper
+end

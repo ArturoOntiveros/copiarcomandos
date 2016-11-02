@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#1C1C1C">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>
+<!--     <link rel="stylesheet" href="css/style.css"/> -->
+  </head>
+  <body>
+  <%= render 'parcials/header' %>
+    <div class="inicio">
+      <div class="inicio__musica">
+        <div class="wrapper">
+          <h1>Música</h1>
+          <p>Encuentra la mejor música del momento</p><a href="<%= artistas_prueba_path %>" class="button">Ver Categorías</a>
+        </div>
+      </div>
+      <div class="inicio__artista">
+        <div class="wrapper">
+          <h1>Cultura Acetato</h1>
+          <p>Entérate de la historia de tu grupo favorito!!!</p><a href="<%= new_new_path %>" class="button">Ver Noticias</a>
+        </div>
+      </div>
+    </div>
+  <%= render 'parcials/footer' %>
+<!--     <script src="js/jquery.js"></script> -->
+    <script src="/assets/menu.js"></script>
+  </body>
+</html>

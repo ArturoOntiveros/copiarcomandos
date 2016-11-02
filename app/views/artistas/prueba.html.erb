@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>     -->
+<!--     <link rel="stylesheet" href="css/style.css"/> -->
+  </head>
+  <body>
+  <%= render 'parcials/header' %>
+    <div class="wrapper">
+      <div class="body five">
+        <h1 class="body__titulo">Categorías</h1>
+        <div class="container">
+          <div class="artista__flex">
+
+            <% @prueba.each do |p| %>
+              <div class="artista">
+                <div class="artista__imagen"><img src="/assets/artista.jpg" alt=""/></div>
+                <div class="artista__nombre">
+                  <h2><%= p.nombre %></h2>
+                </div>
+                <div class="artista__canciones">
+                  <p><%= p.cantidad %> songs</p>
+                </div>
+                <%= link_to "Ver disco", controller: "artistas", action: "ver", id:p %>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+        <a href="#" class="button">Ver más</a>
+      </div>
+
+      <div class="toptitle">
+      <h1 class="body__titulo2 top-space">Top Discos</h1>
+      </div>
+
+    </div>
+
+    <div class="top">
+      <div class="top__cd">
+        <div class="top__flex">
+          <div class="top__album">
+            <div class="top__portada"><img src="/assets/top.jpg" alt=""/></div>
+          </div>
+          <div class="top__info">
+            <h3>Reflection (Deluxe)</h3>
+            <p>Fifth Harmony</p>
+            <p>Visitas: 35</p>
+          </div>
+        </div>
+        <div class="top__flex">
+          <div class="top__album">
+            <div class="top__portada"><img src="/assets/top.jpg" alt=""/></div>
+          </div>
+          <div class="top__info">
+            <h3>Reflection (Deluxe)</h3>
+            <p>Fifth Harmony</p>
+            <p>Visitas: 35</p>
+          </div>
+        </div>
+        <div class="top__flex">
+          <div class="top__album">
+            <div class="top__portada"><img src="/assets/top.jpg" alt=""/></div>
+          </div>
+          <div class="top__info">
+            <h3>Reflection (Deluxe)</h3>
+            <p>Fifth Harmony</p>
+            <p>Visitas: 35</p>
+          </div>
+        </div>
+        <div class="top__flex">
+          <div class="top__album">
+            <div class="top__portada"><img src="/assets/top.jpg" alt=""/></div>
+          </div>
+          <div class="top__info">
+            <h3>Reflection (Deluxe)</h3>
+            <p>Fifth Harmony</p>
+            <p>Visitas: 35</p>
+          </div>
+        </div>
+        <div class="top__flex">
+          <div class="top__album">
+            <div class="top__portada"><img src="/assets/top.jpg" alt=""/></div>
+          </div>
+          <div class="top__info">
+            <h3>Reflection (Deluxe)</h3>
+            <p>Fifth Harmony</p>
+            <p>Visitas: 35</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= render 'parcials/footer' %>
+<!--     <script src="js/jquery.js"></script> -->
+    <script src="/assets/menu.js"></script>
+  </body>
+</html>

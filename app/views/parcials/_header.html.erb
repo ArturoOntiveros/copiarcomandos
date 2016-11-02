@@ -1,0 +1,34 @@
+<header class="header">
+  <div class="wrapper header__flex">
+    <figure class="header__logo"><img class="img-responsive" src="/assets/logo.jpeg" alt=""/></figure>
+    <figure class="header__perfil"><img src="/assets/perfil.jpg" alt=""/></figure>
+
+    <% if user_signed_in? %>
+      <li class="button">
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
+      </li>
+      </p>
+    <% else %>
+      <li class="button">
+      <%= link_to('Login', new_user_session_path)  %>
+      </li>
+      <li class="button">
+      <%= link_to('SignUp', new_user_registration_path)  %>
+      </li>
+    <% end %>
+
+    <div class="header__nav icon-menu"></div>
+  </div>
+</header>
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="<%= root_path %>">Inicio</a></li>
+        <li><a href="<%= profile_profile_path %>">Mi Perfil</a></li>
+        <li><a href="<%= new_new_path %>">Cultura Acetato</a></li>
+        <li><a href="<%= artistas_prueba_path %>">Categorías</a></li>
+        <li><a href="">Conócenos</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul>
+    </nav>
+
