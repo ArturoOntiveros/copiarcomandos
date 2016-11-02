@@ -1,22 +1,16 @@
 ActiveAdmin.register Album do
 permit_params :artist, :name, :year, :thumbnail
-# See permitted parameters documentation:
-# https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
-#
-# permit_params :list, :of, :attributes, :on, :model
-#
-# or
-#
-# permit_params do
-#   permitted = [:permitted, :attributes]
-#   permitted << :other if params[:action] == 'create' && current_user.admin?
-#   permitted
-# end
+
+scope :unartist
+
 	index do
-		column :artist
-		column :name
-		column :year
+		column "Artista", :artist
+		column "Album", :name
+		column "Año publicación", :year
+		column "Imagen", :thumbnail
+	actions
 	end
+
 
 form do |f|
   f.inputs "Project Details" do
