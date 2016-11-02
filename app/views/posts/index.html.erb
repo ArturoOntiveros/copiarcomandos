@@ -1,3 +1,5 @@
+  <%= render 'parcials/header' %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Posts</h1>
@@ -16,6 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
+        <td><%= image_tag post.image.url(:thumb) %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,3 +30,4 @@
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+  <%= render 'parcials/footer' %>

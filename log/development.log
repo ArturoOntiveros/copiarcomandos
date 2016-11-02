@@ -5584,3 +5584,2751 @@ Processing by Admin::AlbumsController#index as HTML
   [1m[36mSong Load (0.6ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
   Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (138.6ms)
 Completed 200 OK in 143ms (Views: 139.5ms | ActiveRecord: 1.8ms)
+  [1m[36mAlbum Load (2.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhotonameToAlbum (20161102031013)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "albums" ADD "photo" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161102031013"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/artistas/prueba" for 127.0.0.1 at 2016-11-01 21:18:52 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistasController#prueba as HTML
+  Rendered parcials/_header.html.erb (3.8ms)
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT "pruebas".* FROM "pruebas"
+  Rendered artistas/prueba.html.erb within layouts/application (359.7ms)
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    30:             <% end %>
+    31: 
+    32: 
+    33: <%= form_for @movie, html: { multipart: true } do |f| %>
+    34:   <p>
+    35:     <label>My Avatar</label>
+    36:     <%= f.file_field :photo %>
+  app/views/artistas/prueba.html.erb:33:in `_app_views_artistas_prueba_html_erb___4318666851280248311_69937839511400'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddPhotonameToAlbum (20161102031013)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "aalbums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "year" varchar, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "photo" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_aalbums_on_artist_id" ON "aalbums" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "albums"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aalbums" ("id","name","year","artist_id","created_at","updated_at","photo") VALUES (1, 'Mary Jane', '1985', NULL, '2016-11-02 02:01:48.700374', '2016-11-02 02:01:48.700374', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aalbums" ("id","name","year","artist_id","created_at","updated_at","photo") VALUES (2, 'hola', 'hjs', NULL, '2016-11-02 02:58:08.415652', '2016-11-02 02:58:08.415652', NULL)
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "albums"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "year" varchar, "artist_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_aalbums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_aalbums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_albums_on_artist_id" ON "albums" ("artist_id")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "aalbums"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "albums" ("id","name","year","artist_id","created_at","updated_at") VALUES (1, 'Mary Jane', '1985', NULL, '2016-11-02 02:01:48.700374', '2016-11-02 02:01:48.700374')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "albums" ("id","name","year","artist_id","created_at","updated_at") VALUES (2, 'hola', 'hjs', NULL, '2016-11-02 02:58:08.415652', '2016-11-02 02:58:08.415652')[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aalbums"
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20161102031013"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/artistas/prueba" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistasController#prueba as HTML
+  Rendered parcials/_header.html.erb (5.9ms)
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT "pruebas".* FROM "pruebas"
+  Rendered parcials/_footer.html.erb (1.3ms)
+  Rendered artistas/prueba.html.erb within layouts/application (301.3ms)
+Completed 200 OK in 665ms (Views: 654.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/application.self-be9996249144539918d5f44d24a92479719b09fd0907f3d02bfdaa4df4681c8c.css?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/style.self-3579964aee6e737263f5c715f3bab7aad7197a6a7ba2a54532761e1f6217bf93.css?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:08 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/menu.self-b633f3297983c8893d8c7fe4c3f81300476cc16fd8b78264ff538cda9aa71ec7.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/artistas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/indnew.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery.flexslider-min.self-7b16b806d46440b436abd9f08eb27d67d2b6741a89c636dc3b32a8aeeb24a5fa.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/jquery.flexslider.self-cd1cf5860e372a5a2574e51e1fc6b5dbeb2f1242c9f80991ee4b0c11d1051405.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/new.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/profile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/toptitle.jpg" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/5.jpg" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-01 21:22:09 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-02 06:29:02 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IndexController#landingpage as HTML
+  Rendered parcials/_header.html.erb (5.4ms)
+  Rendered parcials/_footer.html.erb (1.9ms)
+  Rendered index/landingpage.html.erb within layouts/application (413.5ms)
+Completed 200 OK in 677ms (Views: 668.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+Processing by IndexController#landingpage as HTML
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered index/landingpage.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 78.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/musica.jpg" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/artistas.jpg" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:29:03 -0600
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-11-02 06:29:08 -0600
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:29:08 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered parcials/_footer.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 126ms (Views: 110.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:29:08 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:29:08 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:29:08 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:29:09 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:29:09 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:29:09 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:29:11 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ogi+dVtLaDI9IE4yQybLF6KlzWZecWcVxdkhW+UezPFwfnavC+s6jt10mjNQOM9u5bDIeq7p06gL7btT0uzTEA==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "prueba@outlook.com"]]
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ogi+dVtLaDI9IE4yQybLF6KlzWZecWcVxdkhW+UezPFwfnavC+s6jt10mjNQOM9u5bDIeq7p06gL7btT0uzTEA==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 244ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:29:12 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZT0FW8iny7uBSM4axVkuXVaopSUlLctbmMxmN3EA/qYvS82BmAeZB2EcGhvWRyokEb2gOdW1f+ZW+Pw/RvLhRw==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "prueba@outlook.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZT0FW8iny7uBSM4axVkuXVaopSUlLctbmMxmN3EA/qYvS82BmAeZB2EcGhvWRyokEb2gOdW1f+ZW+Pw/RvLhRw==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.2ms)
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 228ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:29:13 -0600
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-11-02 06:29:52 -0600
+Processing by RegistrationsController#new as HTML
+  Rendered parcials/_header.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 99ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+Processing by IndexController#landingpage as HTML
+  Rendered parcials/_header.html.erb (0.5ms)
+  Rendered parcials/_footer.html.erb (0.9ms)
+  Rendered index/landingpage.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/artistas.jpg" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/musica.jpg" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:30:53 -0600
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:32:24 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered parcials/_header.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered parcials/_footer.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 91ms (Views: 89.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-11-02 06:33:27 -0600
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:33:27 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:33:27 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:33:27 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:33:28 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:33:28 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:33:28 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:33:28 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2016-11-02 06:33:50 -0600
+Processing by IndexController#landingpage as HTML
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.7ms)
+  Rendered index/landingpage.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 113ms (Views: 112.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 06:33:51 -0600
+
+
+Started GET "/assets/musica.jpg" for 127.0.0.1 at 2016-11-02 06:33:51 -0600
+
+
+Started GET "/assets/artistas.jpg" for 127.0.0.1 at 2016-11-02 06:33:51 -0600
+
+
+Started GET "/posts/" for 127.0.0.1 at 2016-11-02 06:33:57 -0600
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 104ms (Views: 100.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+Processing by PostsController#index as HTML
+  Rendered parcials/_header.html.erb (0.7ms)
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered parcials/_footer.html.erb (3.0ms)
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-be9996249144539918d5f44d24a92479719b09fd0907f3d02bfdaa4df4681c8c.css?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/style.self-3579964aee6e737263f5c715f3bab7aad7197a6a7ba2a54532761e1f6217bf93.css?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/menu.self-b633f3297983c8893d8c7fe4c3f81300476cc16fd8b78264ff538cda9aa71ec7.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/artistas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/indnew.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery.flexslider-min.self-7b16b806d46440b436abd9f08eb27d67d2b6741a89c636dc3b32a8aeeb24a5fa.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/jquery.flexslider.self-cd1cf5860e372a5a2574e51e1fc6b5dbeb2f1242c9f80991ee4b0c11d1051405.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/new.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/profile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:36:56 -0600
+
+
+Started GET "/posts/" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered parcials/_header.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 116ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:37:26 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:37:32 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HbcH8sbsUvyaDfhjN4i74bt5gDylidXfvrrCT3ZiyzBXwc8olkwAQHpZLGIklr+Y/GyFIFURYWJwjlhHQZDU0Q==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "prueba@outlook.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HbcH8sbsUvyaDfhjN4i74bt5gDylidXfvrrCT3ZiyzBXwc8olkwAQHpZLGIklr+Y/GyFIFURYWJwjlhHQZDU0Q==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 239ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:37:32 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:37:33 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:37:33 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:37:33 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:37:33 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:37:33 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oWLASQLLgacEJ4X6u1R/XLopu45S630C/rHPr4zAfWLrFAiTUmvTG+RzUfuoSnsl/Ty+kqJzyb8whVWnuzJigw==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "prueba@outlook.com"]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oWLASQLLgacEJ4X6u1R/XLopu45S630C/rHPr4zAfWLrFAiTUmvTG+RzUfuoSnsl/Ty+kqJzyb8whVWnuzJigw==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 247ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:37:35 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h4PiJ1a5FgWxwrzEU7GdQmdRus4/bwk0SJpufnL9nLzN9Sr9BhlEuVGWaMVAr5k7IES/0s/3vYmGrvR2RQ+DXQ==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "prueba@outlook.com"]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h4PiJ1a5FgWxwrzEU7GdQmdRus4/bwk0SJpufnL9nLzN9Sr9BhlEuVGWaMVAr5k7IES/0s/3vYmGrvR2RQ+DXQ==", "user"=>{"email"=>"prueba@outlook.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 236ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:37:36 -0600
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-11-02 06:38:43 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aq4Sk8r2JHWj3bGfbmV1j1R/YkiNNrU94yZ/w3XnWVYg2NpJmlZ2yUOJZZ59e3H2E2pnVH2uAYAtEuXLQhVGtw==", "user"=>{"email"=>"acetatosmxservice@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "acetatosmxservice@gmail.com"]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aq4Sk8r2JHWj3bGfbmV1j1R/YkiNNrU94yZ/w3XnWVYg2NpJmlZ2yUOJZZ59e3H2E2pnVH2uAYAtEuXLQhVGtw==", "user"=>{"email"=>"acetatosmxservice@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered parcials/_header.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 233ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 06:38:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToPosts (20161102130616)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "posts" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "posts" ADD "image_content_type" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "posts" ADD "image_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "posts" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161102130616"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendered parcials/_header.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered parcials/_footer.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (336.5ms)
+Completed 200 OK in 560ms (Views: 545.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 07:09:32 -0600
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-11-02 07:10:22 -0600
+Processing by PostsController#index as HTML
+  Rendered parcials/_header.html.erb (0.4ms)
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered parcials/_footer.html.erb (1.7ms)
+  Rendered posts/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 07:10:23 -0600
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-11-02 07:10:26 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (10.9ms)
+  Rendered posts/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 95ms (Views: 88.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-11-02 07:14:02 -0600
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (5.8ms)
+  Rendered posts/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 100ms (Views: 93.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2016-11-02 07:14:22 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bRnjcjpF63ZT83t43+ratynQznvHTUcquF86eq/yo1MnbyuoauW5yrOnr3nM9N7ObsXLZzfV85d2a6BymAC8sg==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00000005b84fc0 @tempfile=#<Tempfile:/tmp/RackMultipart20161102-5284-1yoseiw.png>, @original_filename="Captura de pantalla de 2016-10-23 17-37-18.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Captura de pantalla de 2016-10-23 17-37-18.png\"\r\nContent-Type: image/png\r\n">, "title"=>"prueba papercpil", "content"=>"hola"}, "commit"=>"Create Post"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/295903b64e4cdefa11c0ddeaf8deff8520161102-5284-h4d4mp.png'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' -auto-orient -resize "600x600>" '/tmp/73d0b744654efcb4203060e3f623ea3c20161102-5284-pcsxmy'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' -auto-orient -resize "300x300" '/tmp/73d0b744654efcb4203060e3f623ea3c20161102-5284-1gsgd10'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/55f68bb8ac49991d34420c110574fbee20161102-5284-q0x31c.png[0]' -auto-orient -resize "x150" -crop "150x150+58+0" +repage '/tmp/73d0b744654efcb4203060e3f623ea3c20161102-5284-5glh9l'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/295903b64e4cdefa11c0ddeaf8deff8520161102-5284-1l89buo.png'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "content", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["title", "prueba papercpil"], ["content", "hola"], ["image_file_name", "Captura_de_pantalla_de_2016-10-23_17-37-18.png"], ["image_content_type", "image/png"], ["image_file_size", 639600], ["image_updated_at", "2016-11-02 13:14:22.171832"], ["created_at", "2016-11-02 13:14:22.596822"], ["updated_at", "2016-11-02 13:14:22.596822"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 446ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2016-11-02 07:14:22 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 85ms (Views: 80.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+Processing by PostsController#index as HTML
+  Rendered parcials/_header.html.erb (0.5ms)
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered parcials/_footer.html.erb (3.3ms)
+  Rendered posts/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 89ms (Views: 87.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 07:17:13 -0600
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2016-11-02 07:17:40 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (3.0ms)
+  Rendered posts/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2016-11-02 07:17:43 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dhr2t0sHj7pgbI6svNLhf3SX/1D6SJ+vGplIqBl6pQc8bD5tG6fdBoA4Wq2vzOUGM4L6TArQKxLUrdKgLoi65g==", "post"=>{"title"=>"prueba papercpil", "content"=>"hola"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2016-11-02 07:17:43 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2016-11-02 07:29:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 566ms (Views: 537.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-11-02 07:29:24 -0600
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (88.8ms)
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at 2016-11-02 07:29:26 -0600
+Processing by Admin::AlbumsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "albums"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (142.0ms)
+Completed 200 OK in 150ms (Views: 145.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/albums/new" for 127.0.0.1 at 2016-11-02 07:29:28 -0600
+Processing by Admin::AlbumsController#new as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (99.9ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/artists" for 127.0.0.1 at 2016-11-02 07:29:30 -0600
+Processing by Admin::ArtistsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mAlbum Load (0.3ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (128.5ms)
+Completed 200 OK in 134ms (Views: 131.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/artists/new" for 127.0.0.1 at 2016-11-02 07:29:31 -0600
+Processing by Admin::ArtistsController#new as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (109.1ms)
+Completed 200 OK in 112ms (Views: 111.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:29:32 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (148.4ms)
+Completed 200 OK in 154ms (Views: 151.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:29:33 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (99.4ms)
+Completed 200 OK in 103ms (Views: 102.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/comments" for 127.0.0.1 at 2016-11-02 07:29:35 -0600
+Processing by Admin::CommentsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ?[0m  [["namespace", "admin"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = ? LIMIT 30 OFFSET 0) subquery_for_count  [["namespace", "admin"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments"  ORDER BY resource_type asc[0m
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments"  ORDER BY author_type asc
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (98.7ms)
+Completed 200 OK in 105ms (Views: 102.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/projects" for 127.0.0.1 at 2016-11-02 07:29:38 -0600
+Processing by Admin::ProjectsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::StatementInvalid (Could not find table 'projects'):
+  activerecord (4.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:513:in `table_structure'
+  activerecord (4.2.6) lib/active_record/connection_adapters/sqlite3_adapter.rb:387:in `columns'
+  activerecord (4.2.6) lib/active_record/connection_adapters/schema_cache.rb:43:in `columns'
+  activerecord (4.2.6) lib/active_record/attributes.rb:93:in `columns'
+  activerecord (4.2.6) lib/active_record/model_schema.rb:260:in `column_names'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource.rb:101:in `resource_column_names'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/order_clause.rb:19:in `to_sql'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:216:in `apply_sorting'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:58:in `block in find_collection'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:57:in `each'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:57:in `find_collection'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:42:in `collection'
+  inherited_resources (1.6.0) lib/inherited_resources/actions.rb:7:in `index'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/streaming.rb:12:in `index'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.4ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 07:41:15 -0600
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (62.2ms)
+Completed 200 OK in 66ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 07:41:15 -0600
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (69.0ms)
+Completed 200 OK in 70ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:41:20 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (121.7ms)
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:41:22 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (74.3ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:41:31 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (75.0ms)
+Completed 200 OK in 77ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-11-02 07:41:37 -0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jI4BfndGynR23eCkU6hT00JpYbzrnLp0USi2h0p7J6kRPDfqX1JlTGPo4OCUKU2ChygmgM2xlQfcDjSKtvzfw==", "category"=>{"name"=>"otra"}, "commit"=>"Create Category"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  activemodel (4.2.6) lib/active_model/forbidden_attributes_protection.rb:21:in `sanitize_for_mass_assignment'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:33:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+  inherited_resources (1.6.0) lib/inherited_resources/actions.rb:31:in `create'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jI4BfndGynR23eCkU6hT00JpYbzrnLp0USi2h0p7J6kRPDfqX1JlTGPo4OCUKU2ChygmgM2xlQfcDjSKtvzfw==", "category"=>{"name"=>"otra"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "otra"], ["created_at", "2016-11-02 13:41:55.498531"], ["updated_at", "2016-11-02 13:41:55.498531"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/categories/5
+Completed 302 Found in 19ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/categories/5" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+Processing by Admin::CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?  [["resource_type", "Category"], ["resource_id", "5"], ["namespace", "admin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."resource_type" = ? AND "active_admin_comments"."resource_id" = ? AND "active_admin_comments"."namespace" = ?[0m  [["resource_type", "Category"], ["resource_id", "5"], ["namespace", "admin"]]
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/show.html.arb (118.7ms)
+Completed 200 OK in 122ms (Views: 120.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/active_admin.self-5993b5631951abac3b9ea4e182ddb2e801305c14c15a2b468dba287a8b8284bb.css?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_admin/print.self-47e9b5b306b8c449812ca6f4c3c85744ca867b5b1d282fb9695766fe11e48128.css?body=1" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/assets/active_skin/default_logo-d59b61453e0b8e5c6713a61a8b199a12288aa33e75f91db273067afffed549e8.png" for 127.0.0.1 at 2016-11-02 07:41:55 -0600
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:41:58 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (115.7ms)
+Completed 200 OK in 121ms (Views: 117.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/artists" for 127.0.0.1 at 2016-11-02 07:42:04 -0600
+Processing by Admin::ArtistsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "artists"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT "categories".* FROM "categories"
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (120.7ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/artists/new" for 127.0.0.1 at 2016-11-02 07:42:06 -0600
+Processing by Admin::ArtistsController#new as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (83.9ms)
+Completed 200 OK in 86ms (Views: 85.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/albums" for 127.0.0.1 at 2016-11-02 07:42:26 -0600
+Processing by Admin::AlbumsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "albums"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "albums" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums"  ORDER BY "albums"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (117.6ms)
+Completed 200 OK in 124ms (Views: 120.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/albums/new" for 127.0.0.1 at 2016-11-02 07:42:31 -0600
+Processing by Admin::AlbumsController#new as HTML
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (103.4ms)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/songs" for 127.0.0.1 at 2016-11-02 07:42:35 -0600
+Processing by Admin::SongsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "songs" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "songs" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "songs"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "songs" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs"  ORDER BY "songs"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (93.9ms)
+Completed 200 OK in 98ms (Views: 96.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/songs/new" for 127.0.0.1 at 2016-11-02 07:42:36 -0600
+Processing by Admin::SongsController#new as HTML
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (125.3ms)
+Completed 200 OK in 128ms (Views: 126.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:43:13 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (132.3ms)
+Completed 200 OK in 138ms (Views: 134.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/artists" for 127.0.0.1 at 2016-11-02 07:49:59 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::ArtistsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "artists"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "artists" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists"  ORDER BY "artists"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (603.3ms)
+Completed 200 OK in 627ms (Views: 614.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:50:01 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (115.3ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:50:02 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (85.7ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `continent' for #<Category id: nil, name: nil, created_at: nil, updated_at: nil>):
+    1: insert_tag renderer_for(:new)
+  app/admin/category.rb:6:in `block (3 levels) in <top (required)>'
+  app/admin/category.rb:5:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.4ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:51:12 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (436.5ms)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `image' for #<Category id: nil, name: nil, created_at: nil, updated_at: nil>):
+    1: insert_tag renderer_for(:new)
+  app/admin/category.rb:7:in `block (3 levels) in <top (required)>'
+  app/admin/category.rb:5:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.0ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:52:22 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (95.7ms)
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `image' for #<Category id: nil, name: nil, created_at: nil, updated_at: nil>):
+    1: insert_tag renderer_for(:new)
+  app/admin/category.rb:8:in `block (3 levels) in <top (required)>'
+  app/admin/category.rb:5:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 07:58:47 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (442.8ms)
+Completed 200 OK in 456ms (Views: 448.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 07:58:48 -0600
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (64.2ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 07:58:50 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (122.8ms)
+Completed 200 OK in 131ms (Views: 126.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 07:58:51 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (99.1ms)
+Completed 200 OK in 103ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-11-02 07:59:17 -0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yu34b6CzojR641WDy9BZWZc4OxrECpS1EHgRxEPIWQSAmzC18BPwiJq3gYLYzl0g0C0+BjSSIAjeTIvMdDpG5Q==", "category"=>{"name"=>"rocknroll", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x007fe9dd9fd5c0 @tempfile=#<Tempfile:/tmp/RackMultipart20161102-7945-1yc7n6o.png>, @original_filename="Captura de pantalla de 2016-10-23 17-37-18.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"category[thumbnail]\"; filename=\"Captura de pantalla de 2016-10-23 17-37-18.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Category"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+Paperclip::Error (Category model missing required attr_accessor for 'thumbnail_file_name'):
+  paperclip (4.3.7) lib/paperclip/attachment.rb:407:in `block in ensure_required_accessors!'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:405:in `each'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:405:in `ensure_required_accessors!'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:99:in `assign'
+  paperclip (4.3.7) lib/paperclip/has_attached_file.rb:66:in `block in define_setter'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:54:in `public_send'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:54:in `_assign_attribute'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:41:in `block in assign_attributes'
+  actionpack (4.2.6) lib/action_controller/metal/strong_parameters.rb:185:in `each_pair'
+  actionpack (4.2.6) lib/action_controller/metal/strong_parameters.rb:185:in `each_pair'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:35:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+  inherited_resources (1.6.0) lib/inherited_resources/actions.rb:31:in `create'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToCategories (20161102140143)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "categories" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "image_content_type" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "categories" ADD "image_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161102140143"]]
+  [1m[35m (7.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 08:02:09 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (419.9ms)
+Completed 200 OK in 433ms (Views: 425.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2016-11-02 08:02:09 -0600
+Processing by Admin::DashboardController#index as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/page/index.html.arb (63.7ms)
+Completed 200 OK in 65ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 08:02:10 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.2ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (155.4ms)
+Completed 200 OK in 163ms (Views: 157.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 08:02:13 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (111.1ms)
+Completed 200 OK in 115ms (Views: 113.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 08:02:17 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mArtist Load (0.5ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mAlbum Load (0.2ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (119.3ms)
+Completed 200 OK in 124ms (Views: 120.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 08:02:19 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (94.0ms)
+Completed 200 OK in 97ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-11-02 08:02:27 -0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LQ33kwZgZlqSbwYJdn/beaaVff9ebBHqKCcS9KWXBhtnez9JVsA05nI70ghlYd8A4YB44670pVfmE4j8kmUZ+g==", "category"=>{"name"=>"rocknroll", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00000006853c10 @tempfile=#<Tempfile:/tmp/RackMultipart20161102-8142-16pu0v9.png>, @original_filename="Captura de pantalla de 2016-10-23 17-37-18.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"category[thumbnail]\"; filename=\"Captura de pantalla de 2016-10-23 17-37-18.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Category"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+Paperclip::Error (Category model missing required attr_accessor for 'thumbnail_file_name'):
+  paperclip (4.3.7) lib/paperclip/attachment.rb:407:in `block in ensure_required_accessors!'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:405:in `each'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:405:in `ensure_required_accessors!'
+  paperclip (4.3.7) lib/paperclip/attachment.rb:99:in `assign'
+  paperclip (4.3.7) lib/paperclip/has_attached_file.rb:66:in `block in define_setter'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:54:in `public_send'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:54:in `_assign_attribute'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:41:in `block in assign_attributes'
+  actionpack (4.2.6) lib/action_controller/metal/strong_parameters.rb:185:in `each_pair'
+  actionpack (4.2.6) lib/action_controller/metal/strong_parameters.rb:185:in `each_pair'
+  activerecord (4.2.6) lib/active_record/attribute_assignment.rb:35:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:301:in `assign_attributes'
+  /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/lib/active_admin/resource_controller/data_access.rb:123:in `build_resource'
+  inherited_resources (1.6.0) lib/inherited_resources/actions.rb:31:in `create'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.6) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.6) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.6) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAttachmentImageToCategories (20161102140143)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_content_type","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_size" integer, "image_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_size" integer, "image_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531')
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20161102140143"]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentImageToCategories (20161102140143)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "categories" ADD "image_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "image_content_type" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "categories" ADD "image_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "image_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161102140143"]]
+  [1m[35m (6.5ms)[0m  commit transaction
+Migrating to AddAttachmentThumbnailToCategories (20161102140354)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "categories" ADD "thumbnail_file_name" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "categories" ADD "thumbnail_content_type" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "categories" ADD "thumbnail_file_size" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "categories" ADD "thumbnail_updated_at" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20161102140354"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddAttachmentThumbnailToCategories (20161102140354)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_file_name" varchar, "thumbnail_content_type" varchar, "thumbnail_file_size" integer, "thumbnail_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_name","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_name","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_name","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_name","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_content_type" varchar, "thumbnail_file_size" integer, "thumbnail_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_content_type" varchar, "thumbnail_file_size" integer, "thumbnail_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_content_type","thumbnail_file_size","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_file_size" integer, "thumbnail_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_file_size" integer, "thumbnail_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_file_size","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35m (0.1ms)[0m  CREATE TEMPORARY TABLE "acategories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime, "thumbnail_updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "categories"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "acategories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at","thumbnail_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "categories"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "image_file_name" varchar, "image_content_type" varchar, "image_file_size" integer, "image_updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "acategories"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (2, 'rock', '2016-11-02 01:10:04.383457', '2016-11-02 01:10:04.383457', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (3, 'regge', '2016-11-02 01:21:03.570042', '2016-11-02 01:21:03.570042', NULL, NULL, NULL, NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (4, 'opera', '2016-11-02 02:46:49.778710', '2016-11-02 02:46:49.778710', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "categories" ("id","name","created_at","updated_at","image_file_name","image_content_type","image_file_size","image_updated_at") VALUES (5, 'otra', '2016-11-02 13:41:55.498531', '2016-11-02 13:41:55.498531', NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "acategories"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20161102140354"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentThumbnailToCategories (20161102140354)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "categories" ADD "thumbnail_file_name" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "thumbnail_content_type" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "categories" ADD "thumbnail_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "categories" ADD "thumbnail_updated_at" datetime
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161102140354"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_resource_type_and_resource_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_author_type_and_author_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_active_admin_comments_on_namespace' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_albums_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_artists_on_category_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 08:04:46 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT "albums".* FROM "albums"
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (513.4ms)
+Completed 200 OK in 538ms (Views: 520.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/categories/new" for 127.0.0.1 at 2016-11-02 08:04:53 -0600
+Processing by Admin::CategoriesController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (98.1ms)
+Completed 200 OK in 101ms (Views: 99.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/categories" for 127.0.0.1 at 2016-11-02 08:05:23 -0600
+Processing by Admin::CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6B6vLMfpGWY2UcHyXSB0VaixIpAzxXXwOkOet24Am1uiaGf2l0lL2tYFFfNOPnAs76QnjMNdwU30dwS/WfKEug==", "category"=>{"name"=>"rocknroll", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00000002f46490 @tempfile=#<Tempfile:/tmp/RackMultipart20161102-8404-191r7jh.png>, @original_filename="Captura de pantalla de 2016-10-23 17-37-18.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"category[thumbnail]\"; filename=\"Captura de pantalla de 2016-10-23 17-37-18.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Category"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/295903b64e4cdefa11c0ddeaf8deff8520161102-8404-7illwl.png'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]' -auto-orient -resize "x300" -crop "300x300+116+0" +repage '/tmp/c8e0e64e143d98b4f4e79bd398ffa56920161102-8404-sojl8x'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/55f68bb8ac49991d34420c110574fbee20161102-8404-al4fq1.png[0]' -auto-orient -resize "x200" -crop "200x200+77+0" +repage '/tmp/c8e0e64e143d98b4f4e79bd398ffa56920161102-8404-16pxeie'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/295903b64e4cdefa11c0ddeaf8deff8520161102-8404-75sybu.png'
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "thumbnail_file_name", "thumbnail_content_type", "thumbnail_file_size", "thumbnail_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "rocknroll"], ["thumbnail_file_name", "Captura_de_pantalla_de_2016-10-23_17-37-18.png"], ["thumbnail_content_type", "image/png"], ["thumbnail_file_size", 639600], ["thumbnail_updated_at", "2016-11-02 14:05:23.908606"], ["created_at", "2016-11-02 14:05:24.177431"], ["updated_at", "2016-11-02 14:05:24.177431"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/categories/6
+Completed 302 Found in 292ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/categories/6" for 127.0.0.1 at 2016-11-02 08:05:24 -0600
+Processing by Admin::CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/show.html.arb (70.4ms)
+Completed 200 OK in 77ms (Views: 72.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/categories" for 127.0.0.1 at 2016-11-02 08:05:31 -0600
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "categories" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories"  ORDER BY "categories"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT "albums".* FROM "albums"[0m
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (126.7ms)
+Completed 200 OK in 131ms (Views: 128.5ms | ActiveRecord: 0.6ms)
+  [1m[36mCategory Load (3.0ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
