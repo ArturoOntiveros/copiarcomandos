@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102164138) do
+ActiveRecord::Schema.define(version: 20161102173955) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -81,8 +81,12 @@ ActiveRecord::Schema.define(version: 20161102164138) do
     t.string   "correo"
     t.integer  "cantidad"
     t.string   "imag"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "songs", force: :cascade do |t|
