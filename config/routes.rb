@@ -1,7 +1,50 @@
 Rails.application.routes.draw do
 
-
   ActiveAdmin.routes(self)
+  namespace :admin do
+    resources :categories do
+      resources :artists do
+        resources :albums do
+          resources :songs     
+        end
+      end
+    end
+  end
+
+  namespace :admin do
+    resources :categories do
+      resources :albums do
+        resources :songs
+      end
+    end
+  end
+
+  namespace :admin do
+    resources :categories do
+      resources :songs 
+    end
+  end
+
+  namespace :admin do
+    resources :artists do
+      resources :albums do
+        resources :songs     
+      end
+    end
+  end
+ 
+  namespace :admin do
+    resources :artists do
+      resources :songs 
+    end
+  end
+ 
+  namespace :admin do
+    resources :albums do
+      resources :songs
+    end
+  end
+
   resources :posts
   devise_for :users, controllers: { registrations: "registrations" }
   get 'artistas/prueba'
