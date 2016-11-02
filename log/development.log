@@ -11826,3 +11826,1095 @@ Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 11:42:29 -0600
 
 
 Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 11:42:29 -0600
+
+
+Started GET "/admin/pruebas/new" for 127.0.0.1 at 2016-11-02 11:44:37 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::PruebasController#new as HTML
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/new.html.arb (478.1ms)
+Completed 200 OK in 504ms (Views: 486.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/pruebas" for 127.0.0.1 at 2016-11-02 11:44:58 -0600
+Processing by Admin::PruebasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hj/hb2VehmUVkNNkNhyK8zCOdkUvqZWCVeCJlzvX+mpUSSm1Nf7U2fXEB2UlAo6Kd5tzWd8xIT+b1BOfDCXliw==", "prueba"=>{"nombre"=>"sara", "correo"=>"hvh", "cantidad"=>"58", "imag"=>"hv", "thumbnail"=>#<ActionDispatch::Http::UploadedFile:0x00000002bd1148 @tempfile=#<Tempfile:/tmp/RackMultipart20161102-24625-15txins.png>, @original_filename="Captura de pantalla de 2016-10-31 16-07-22.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"prueba[thumbnail]\"; filename=\"Captura de pantalla de 2016-10-31 16-07-22.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Prueba"}
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/3861bb560e805045765f4489857503fc20161102-24625-1bgahp9.png'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]' -auto-orient -resize "x300" -crop "300x300+116+0" +repage '/tmp/94246e4452bc403474e8bb19fd3e339b20161102-24625-x0kl3e'
+Command :: PATH=/usr/local/bin/:$PATH; identify -format '%wx%h,%[exif:orientation]' '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]' 2>/dev/null
+Command :: PATH=/usr/local/bin/:$PATH; identify -format %m '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]'
+Command :: PATH=/usr/local/bin/:$PATH; convert '/tmp/8e3f94c43ebbab1b275c24d4f6e54f2a20161102-24625-2vj8l2.png[0]' -auto-orient -resize "x200" -crop "200x200+77+0" +repage '/tmp/94246e4452bc403474e8bb19fd3e339b20161102-24625-6sxhwa'
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: PATH=/usr/local/bin/:$PATH; file -b --mime '/tmp/3861bb560e805045765f4489857503fc20161102-24625-hel2n0.png'
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pruebas" ("nombre", "correo", "cantidad", "imag", "thumbnail_file_name", "thumbnail_content_type", "thumbnail_file_size", "thumbnail_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "sara"], ["correo", "hvh"], ["cantidad", 58], ["imag", "hv"], ["thumbnail_file_name", "Captura_de_pantalla_de_2016-10-31_16-07-22.png"], ["thumbnail_content_type", "image/png"], ["thumbnail_file_size", 295015], ["thumbnail_updated_at", "2016-11-02 17:44:58.754866"], ["created_at", "2016-11-02 17:44:58.973715"], ["updated_at", "2016-11-02 17:44:58.973715"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/pruebas/2
+Completed 302 Found in 254ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/pruebas/2" for 127.0.0.1 at 2016-11-02 11:44:59 -0600
+Processing by Admin::PruebasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrueba Load (0.2ms)[0m  [1mSELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/show.html.arb (67.2ms)
+Completed 200 OK in 75ms (Views: 68.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/pruebas" for 127.0.0.1 at 2016-11-02 11:45:01 -0600
+Processing by Admin::PruebasController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "pruebas" LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "pruebas" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "pruebas"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "pruebas" LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT  "pruebas".* FROM "pruebas"  ORDER BY "pruebas"."id" desc LIMIT 30 OFFSET 0
+  Rendered /home/arturo/.bundle/ruby/2.3.0/activeadmin-78324a83fa01/app/views/active_admin/resource/index.html.arb (123.8ms)
+Completed 200 OK in 131ms (Views: 126.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/artistas/prueba" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+Processing by ArtistasController#prueba as HTML
+  Rendered parcials/_header.html.erb (3.7ms)
+  [1m[36mPrueba Load (0.5ms)[0m  [1mSELECT "pruebas".* FROM "pruebas"[0m
+  Rendered parcials/_footer.html.erb (3.0ms)
+  Rendered artistas/prueba.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 117ms (Views: 116.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/artista.jpg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/5.jpg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/assets/toptitle.jpg" for 127.0.0.1 at 2016-11-02 11:45:09 -0600
+
+
+Started GET "/artistas/ver/2" for 127.0.0.1 at 2016-11-02 12:01:19 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered parcials/_header.html.erb (3.4ms)
+  Rendered parcials/_footer.html.erb (0.9ms)
+  Rendered artistas/ver.html.erb within layouts/application (290.8ms)
+Completed 200 OK in 444ms (Views: 424.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/flexslider.css" for 127.0.0.1 at 2016-11-02 12:01:19 -0600
+
+
+Started GET "/assets/jquery.flexslider.js" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/assets/1.jpg" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/assets/3.jpg" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/assets/2.jpg" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/assets/fondo.jpg" for 127.0.0.1 at 2016-11-02 12:01:20 -0600
+
+
+Started GET "/artistas/ver/2" for 127.0.0.1 at 2016-11-02 12:01:23 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPrueba Load (0.1ms)[0m  [1mSELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered parcials/_header.html.erb (1.0ms)
+  Rendered parcials/_footer.html.erb (1.1ms)
+  Rendered artistas/ver.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 148ms (Views: 147.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-be9996249144539918d5f44d24a92479719b09fd0907f3d02bfdaa4df4681c8c.css?body=1" for 127.0.0.1 at 2016-11-02 12:01:23 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/style.self-3579964aee6e737263f5c715f3bab7aad7197a6a7ba2a54532761e1f6217bf93.css?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/flexslider.css" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/menu.self-b633f3297983c8893d8c7fe4c3f81300476cc16fd8b78264ff538cda9aa71ec7.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/artistas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/indnew.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery.flexslider-min.self-7b16b806d46440b436abd9f08eb27d67d2b6741a89c636dc3b32a8aeeb24a5fa.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery.flexslider.self-cd1cf5860e372a5a2574e51e1fc6b5dbeb2f1242c9f80991ee4b0c11d1051405.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/new.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/profile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/jquery.flexslider.js" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/artista.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/1.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/2.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/3.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/fondo.jpg" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+
+Started GET "/assets/fonts/flexslider-icon.woff" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/flexslider-icon.woff"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (87.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.0ms)
+
+
+Started GET "/assets/fonts/flexslider-icon.ttf" for 127.0.0.1 at 2016-11-02 12:01:24 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/flexslider-icon.ttf"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (14.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (83.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (12.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (30.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.0ms)
+
+
+Started GET "/artistas/prueba" for 127.0.0.1 at 2016-11-02 12:05:16 -0600
+Processing by ArtistasController#prueba as HTML
+  Rendered parcials/_header.html.erb (1.3ms)
+  [1m[35mPrueba Load (0.2ms)[0m  SELECT "pruebas".* FROM "pruebas"
+  Rendered parcials/_footer.html.erb (0.9ms)
+  Rendered artistas/prueba.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 154ms (Views: 153.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:05:16 -0600
+
+
+Started GET "/assets/5.jpg" for 127.0.0.1 at 2016-11-02 12:05:16 -0600
+
+
+Started GET "/assets/toptitle.jpg" for 127.0.0.1 at 2016-11-02 12:05:16 -0600
+
+
+Started GET "/artistas/ver/1" for 127.0.0.1 at 2016-11-02 12:08:25 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPrueba Load (0.1ms)[0m  [1mSELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered parcials/_header.html.erb (0.6ms)
+  Rendered parcials/_footer.html.erb (2.2ms)
+  Rendered artistas/ver.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 116ms (Views: 114.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/flexslider.css" for 127.0.0.1 at 2016-11-02 12:08:25 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:08:25 -0600
+
+
+Started GET "/assets/jquery.flexslider.js" for 127.0.0.1 at 2016-11-02 12:08:25 -0600
+
+
+Started GET "/assets/fondo.jpg" for 127.0.0.1 at 2016-11-02 12:08:25 -0600
+
+
+Started GET "/artistas/ver/1" for 127.0.0.1 at 2016-11-02 12:08:46 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered parcials/_header.html.erb (1.7ms)
+  Rendered artistas/ver.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    25:             <h1 class="disco">Nombre del disco</h1>
+    26: 
+    27:                 <div class="artistas">
+    28:                   <div class="artista__imagen"><img src="<%= p.thumbnail%>" alt=""/></div>
+    29:                   <div class="artista__nombre">
+    30:                     <h2><%= @prueba.nombre %></h2>
+    31:                   </div>
+  app/views/artistas/ver.html.erb:28:in `_app_views_artistas_ver_html_erb__436458094120122576_70120950256100'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.8ms)
+
+
+Started GET "/artistas/prueba" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+Processing by ArtistasController#prueba as HTML
+  Rendered parcials/_header.html.erb (0.5ms)
+  [1m[36mPrueba Load (0.2ms)[0m  [1mSELECT "pruebas".* FROM "pruebas"[0m
+  Rendered parcials/_footer.html.erb (0.7ms)
+  Rendered artistas/prueba.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 97ms (Views: 95.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-be9996249144539918d5f44d24a92479719b09fd0907f3d02bfdaa4df4681c8c.css?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/style.self-3579964aee6e737263f5c715f3bab7aad7197a6a7ba2a54532761e1f6217bf93.css?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/menu.self-b633f3297983c8893d8c7fe4c3f81300476cc16fd8b78264ff538cda9aa71ec7.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/artistas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/indnew.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery.flexslider-min.self-7b16b806d46440b436abd9f08eb27d67d2b6741a89c636dc3b32a8aeeb24a5fa.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/jquery.flexslider.self-cd1cf5860e372a5a2574e51e1fc6b5dbeb2f1242c9f80991ee4b0c11d1051405.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/new.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:01 -0600
+
+
+Started GET "/assets/profile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/5.jpg" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/toptitle.jpg" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 12:09:02 -0600
+
+
+Started GET "/artistas/ver/1" for 127.0.0.1 at 2016-11-02 12:09:03 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered parcials/_header.html.erb (0.6ms)
+  Rendered artistas/ver.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `thumbnail' for nil:NilClass):
+    25:             <h1 class="disco">Nombre del disco</h1>
+    26: 
+    27:                 <div class="artistas">
+    28:                   <div class="artista__imagen"><img src="<%= p.thumbnail%>" alt=""/></div>
+    29:                   <div class="artista__nombre">
+    30:                     <h2><%= @prueba.nombre %></h2>
+    31:                   </div>
+  app/views/artistas/ver.html.erb:28:in `_app_views_artistas_ver_html_erb__436458094120122576_70120950256100'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.4ms)
+
+
+Started GET "/artistas/ver/1" for 127.0.0.1 at 2016-11-02 12:10:07 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPrueba Load (0.1ms)[0m  [1mSELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered artistas/ver.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `prueba' for #<#<Class:0x00000003ea1958>:0x0000000389a000>
+Did you mean?  @prueba):
+    25:             <h1 class="disco">Nombre del disco</h1>
+    26: 
+    27:                 <div class="artistas">
+    28:                   <div class="artista__imagen"><img src="<%= prueba.thumbnail %>" alt=""/></div>
+    29:                   <div class="artista__nombre">
+    30:                     <h2><%= @prueba.nombre %></h2>
+    31:                   </div>
+  app/views/artistas/ver.html.erb:28:in `_app_views_artistas_ver_html_erb__436458094120122576_29568460'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.3ms)
+
+
+Started GET "/artistas/ver/1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+Processing by ArtistasController#ver as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPrueba Load (0.1ms)[0m  SELECT  "pruebas".* FROM "pruebas" WHERE "pruebas"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered parcials/_header.html.erb (0.4ms)
+  Rendered parcials/_footer.html.erb (0.9ms)
+  Rendered artistas/ver.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-be9996249144539918d5f44d24a92479719b09fd0907f3d02bfdaa4df4681c8c.css?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/style.self-3579964aee6e737263f5c715f3bab7aad7197a6a7ba2a54532761e1f6217bf93.css?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/flexslider.css" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/menu.self-b633f3297983c8893d8c7fe4c3f81300476cc16fd8b78264ff538cda9aa71ec7.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/core.self-93be4d22eda916787802a64d8f88b52db8a9027d4ccbbc0942625324a7d12d44.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/datepicker.self-6267be6d4d0f0e8665be3b4d6ac07f40ba23a32aff8eaa5d1bfc00f76a9eeae7.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/widget.self-c1602241ddc51216b58391768667068867b8e15b9efc722befcd25771eda6819.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/button.self-4d4f21ba77bbf8cc08ae65e2b6329a7a1b952b32c3ba7bffca8313e7e8c93d0c.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/mouse.self-c513294e8da73f31f84ba3ef11e2a1180a47faea0eb2fea4a53fc26153dd21fd.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/draggable.self-debcca3d0d5d9afe2fe91a6fd1aebdb41ca0a55f2f6017352e6c02b6d8a6e64c.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/position.self-e693ced4ecfa1a276f0b794f32c1d30d792764b08788bf68ecfa3b388c291333.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/dialog.self-5a6c7980dfa3f6b74445b0f4b20eed799ee65363163500ed7f032e603d6b022d.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/resizable.self-60b870565f3cd62982c1907828119bb51f42ec8228d5e23868153edc3abc685c.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/sortable.self-df2d80a36f9dfbe0facc596ccd92af83ca50d38e4cd6a84810aaf5d40b8cd181.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery-ui/tabs.self-dc07b44bf1b926c8d28ccd2658e30933881e5329348caf70cf305c3943f6bbd7.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/jquery_ui.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/base.self-ab2cb3098b53fe7d229937d768d701e8f4013f2a5aea7988d8f2149fa40426db.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/batch_actions.self-fbed82dc1e31cf860056cce6c02f5bc5831ad5343d68ac3ab17471c9e05e9195.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/checkbox-toggler.self-ab6f686db7db58fd7f370cd6f7a6d7abe6884b8d2a144f42a744c2276587b457.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/dropdown-menu.self-8ccb356121a1c40094bb429d6cfac85d9c8ad114fb93730892d9df9986730a0a.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/flash.self-8f05a5d9328ea28fca100b057787fbfb567986513c5f1735ea48fad8f9571c10.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/has_many.self-ece319debdc01ca5096ae8ac6c130ffc0decab382543b4b94e18591375d3d3bb.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/modal_dialog.self-0e86d9de4b99cb242de337a342f957f4872f686afc40f31f32d855672b1cd878.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/per_page.self-94323c49402595a22bdea01b8dc3f8103e290d300238ebd49efa26d76d7ee117.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/lib/table-checkbox-toggler.self-f5200d732ec9ffd4ee8fd1fe11524ad7b54a67f6c0ef447a29d119ece2dcecdb.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery-ui.self-f96f2ec2a32c4bc4da4292cc74bddeca0bb223d81a421c98c4d613632860945e.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/ext/jquery.self-da8dafbbe883092bcae73f35a8caf4ae6170fe7d8130ae7039a233f9b509c757.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/initializers/batch_actions.self-f5c360e8640b40f00640f6e5c7cfe0addeb244ed72e1a9828c52919515d23cf1.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/initializers/datepicker.self-f8ac66c85afd35ee1555c09a2418efc7a7930e1f6dd783461379c2bb2184f80e.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/initializers/filters.self-9b9312d6bed532db668c5417a009b7fb7caf58f33299783ed02c2c72340a498a.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin/initializers/tabs.self-65de8b1688d4f8782c04bf07ba6314d3c8b33b9391a482a07214ac4df99dd904.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/active_admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/artistas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/indnew.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery.flexslider-min.self-7b16b806d46440b436abd9f08eb27d67d2b6741a89c636dc3b32a8aeeb24a5fa.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery.flexslider.self-cd1cf5860e372a5a2574e51e1fc6b5dbeb2f1242c9f80991ee4b0c11d1051405.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/new.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/profile.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/application.self-44dc72337fbefc4f8c73fc8781b922cf9e4f99f8d068e6563c3820851d9390f6.js?body=1" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/jquery.flexslider.js" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/logo.jpeg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/menu.js" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/perfil.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/1.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/2.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/3.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/fondo.jpg" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/email.png" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/twitter.png" for 127.0.0.1 at 2016-11-02 12:10:17 -0600
+
+
+Started GET "/assets/youtube.png" for 127.0.0.1 at 2016-11-02 12:10:18 -0600
+
+
+Started GET "/assets/facebook.png" for 127.0.0.1 at 2016-11-02 12:10:18 -0600
+
+
+Started GET "/assets/fonts/flexslider-icon.woff" for 127.0.0.1 at 2016-11-02 12:10:18 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/flexslider-icon.woff"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.0ms)
+
+
+Started GET "/assets/fonts/flexslider-icon.ttf" for 127.0.0.1 at 2016-11-02 12:10:18 -0600
+
+ActionController::RoutingError (No route matches [GET] "/assets/fonts/flexslider-icon.ttf"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (35.5ms)

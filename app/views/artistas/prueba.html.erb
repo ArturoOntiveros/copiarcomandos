@@ -18,7 +18,7 @@
 
             <% @prueba.each do |p| %>
               <div class="artista">
-                <div class="artista__imagen"><img src="/assets/artista.jpg" alt=""/></div>
+                <div class="artista__imagen"><img src="<%= p.thumbnail %>" alt=""/></div>
                 <div class="artista__nombre">
                   <h2><%= p.nombre %></h2>
                 </div>
