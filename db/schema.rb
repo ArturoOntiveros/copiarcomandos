@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161102140354) do
+ActiveRecord::Schema.define(version: 20161102164138) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -32,8 +32,12 @@ ActiveRecord::Schema.define(version: 20161102140354) do
     t.string   "name"
     t.string   "year"
     t.integer  "artist_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   add_index "albums", ["artist_id"], name: "index_albums_on_artist_id"
@@ -86,8 +90,12 @@ ActiveRecord::Schema.define(version: 20161102140354) do
     t.string   "composer"
     t.time     "time"
     t.integer  "album_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "audio_file_name"
+    t.string   "audio_content_type"
+    t.integer  "audio_file_size"
+    t.datetime "audio_updated_at"
   end
 
   add_index "songs", ["album_id"], name: "index_songs_on_album_id"
