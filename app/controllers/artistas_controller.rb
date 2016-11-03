@@ -2,11 +2,11 @@ class ArtistasController < ApplicationController
   before_action :authenticate_user!
   
   def prueba
-  	@prueba = Prueba.all
+  	@artist = Artist.all
   end
 
   def ver
-  	@prueba = Prueba.find(params[:id])
+  	@artist = Artist.find(params[:id])
   end
 
 end

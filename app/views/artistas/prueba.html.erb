@@ -11,19 +11,17 @@
   <%= render 'parcials/header' %>
     <div class="wrapper">
       <div class="body five">
-        <h1 class="body__titulo">Categorías</h1>
+        <h1 class="body__titulo">Artistas</h1>
         <div class="container">
           <div class="artista__flex">
 
-            <% @prueba.each do |p| %>
+            <% @artist.each do |p| %>
               <div class="artista">
                 <div class="artista__imagen"><img src="<%= p.thumbnail %>" alt=""/></div>
                 <div class="artista__nombre">
-                  <h2><%= p.nombre %></h2>
+                  <h2><%= p.name %></h2>
                 </div>
-                <div class="artista__canciones">
-                  <p><%= p.cantidad %> songs</p>
-                </div>
+
                 <%= link_to "Ver disco", controller: "artistas", action: "ver", id:p %>
               </div>
             <% end %>

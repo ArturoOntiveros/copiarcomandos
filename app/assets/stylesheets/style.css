@@ -415,6 +415,7 @@ Profile
   padding: 100px;
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 }
 
 .imagp{
@@ -428,6 +429,17 @@ Profile
   margin-right: auto;
   margin-top: 80px;
 }
+
+.bodyd{
+  background-image:url('profile.jpg');
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  margin-top: 43px;
+  height: 500px;
+}
+
 
 .un{
   text-align: center;
