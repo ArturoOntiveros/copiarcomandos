@@ -202,6 +202,7 @@ footer #redes-s > div:hover{
   border-radius: 500px;
   background-color: #fff;
   color: #7F8C8D;
+  list-style: none;
 }
 
 .button:hover {

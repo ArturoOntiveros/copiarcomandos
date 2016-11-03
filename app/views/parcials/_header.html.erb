@@ -6,15 +6,18 @@
     <% if user_signed_in? %>
     <p>Bienvenido Acetatero <%= current_user.name %>
       <li class="button">
-      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
+        <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %> 
+      </li>
+      <li class="button">
+        <%= link_to('Mi Perfil', profile_profile_path) %>    
       </li>
       </p>
     <% else %>
       <li class="button">
-      <%= link_to('Login', new_user_session_path)  %>
+      <%= link_to('Iniciar Sesión', new_user_session_path)  %>
       </li>
       <li class="button">
-      <%= link_to('SignUp', new_user_registration_path)  %>
+      <%= link_to('Registrarme', new_user_registration_path)  %>
       </li>
     <% end %>
 
@@ -27,9 +30,7 @@
         <li><a href="<%= root_path %>">Inicio</a></li>
         <li><a href="<%= profile_profile_path %>">Mi Perfil</a></li>
         <li><a href="<%= new_new_path %>">Cultura Acetato</a></li>
-        <li><a href="<%= artistas_prueba_path %>">Categorías</a></li>
-        <li><a href="">Conócenos</a></li>
-        <li><a href="">Contacto</a></li>
+        <li><a href="<%= artistas_prueba_path %>">Artistas</a></li>
       </ul>
     </nav>
 
