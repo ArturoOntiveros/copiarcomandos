@@ -4,6 +4,7 @@
     <figure class="header__perfil"><img src="/assets/perfil.jpg" alt=""/></figure>
 
     <% if user_signed_in? %>
+    <p>Bienvenido Acetatero <%= current_user.name %>
       <li class="button">
       <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>     
       </li>
