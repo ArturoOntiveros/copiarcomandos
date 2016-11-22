@@ -440,6 +440,52 @@ Profile
   height: 500px;
 }
 
+.bodylog{
+  background-image:url('profile.jpg');
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #a5a5a5;
+  margin-top: 43px;
+  height: 440px;
+}
+
+.bodylogcenter{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.bodysign{
+  background-image:url('profile.jpg');
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #a5a5a5;
+  margin-top: 43px;
+  height: 440px;
+}
+
+.bodysigncenter{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.bodyedit{
+  background-image:url('profile.jpg');
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #a5a5a5;
+  margin-top: 43px;
+  height: 800px;
+}
+
+.bodyeditcenter{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+
 
 .un{
   text-align: center;

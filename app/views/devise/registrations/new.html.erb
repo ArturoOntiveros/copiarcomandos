@@ -1,4 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>    
+<!--     <link rel="stylesheet" href="css/style.css"/> -->
+  </head>
+  <body>
+    
   <%= render 'parcials/header' %>
+
+<div class="bodysign">
+  <div class="bodysigncenter">
+
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -9,15 +25,6 @@
     <%= f.text_field :name, autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :nationality %><br />
-    <%= f.text_field :nationality, autofocus: true %>
-  </div>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -43,5 +50,8 @@
 <% end %>
 
   <%= render "devise/shared/links" %>
+  </div>
+        <script src="/assets/menu.js"></script>
+</div>
   <%= render 'parcials/footer' %>
-  <script src="/assets/menu.js"></script>
+  </body>

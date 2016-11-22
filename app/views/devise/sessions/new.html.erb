@@ -12,8 +12,8 @@
     
   <%= render 'parcials/header' %>
 
-<div class="bodyd">
-  <!--<div class="devise"> -->
+<div class="bodylog">
+  <div class="bodylogcenter">
     <h2>Log in</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -40,8 +40,8 @@
     <% end %>
         
         <%= render "devise/shared/links" %>
-
+  </div>
         <script src="/assets/menu.js"></script>
-<!--   </div> -->
-  <%= render 'parcials/footer' %>
 </div>
+  <%= render 'parcials/footer' %>
+  </body>

@@ -29,8 +29,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
 gem 'paperclip', '~> 4.3', '>= 4.3.7'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem "bcrypt", "~> 3.1.1"
 # Use Unicorn as the app server
 # gem 'unicorn'
 
