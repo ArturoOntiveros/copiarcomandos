@@ -20,18 +20,12 @@
                 <div class="artista__imagen"><img src="<%= p.thumbnail %>" alt=""/></div>
                 <div class="artista__nombre">
                   <h2><%= p.name %></h2>
+                  <h2><%= p.cd %></h2>
+                  <h2><%= p.price %></h2>
                 </div>
-
                 <%= link_to "Ver disco", controller: "artistas", action: "ver", id:p %>
               </div>
             <% end %>
-
-
-
-
-
-
-
           </div>
         </div>
         <a href="#" class="button">Ver más</a>

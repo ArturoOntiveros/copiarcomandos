@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>
+  </head>
+  <body>
+  <%= render 'parcials/header' %>
+
+
+  <div>
+
+  <h1>Compra</h1>
+
+  <%= form_for :comprar do |f| %>
+    <p>
+      <%= f.label :numerotarjeta %></br>
+      <%= f.text_field :numerotarjeta %>
+    </p>
+    <p>
+      <%= f.label :cvv %></br>
+      <%= f.text_field :cvv %>
+    </p>
+    <p>
+      <%= f.label :vencimiento %></br>
+      <%= f.text_field :vencimiento %>
+    </p>
+    <p>
+      <%= f.submit 'Realizar Compra' %>
+    </p>
+  <%end%>
+
+  </div>
+
+    <%= render 'parcials/footer' %>
+    <script src="/assets/menu.js"></script>
+  </body>
+</html>

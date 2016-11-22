@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 20161103140604) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "name"
+    t.string   "price"
+    t.string   "cd"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "thumbnail_file_name"
