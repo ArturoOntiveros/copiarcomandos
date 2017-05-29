@@ -5,9 +5,6 @@
 
     <% if user_signed_in? %>
     <p>Bienvenido Acetatero <%= current_user.name %>
-    </br>
-    Tu password está siendo protegido: </br>
-    <%= current_user.encrypted_password %>
       <li class="button">
         <%= link_to('Cerrar Sesión', destroy_user_session_path, :method => :delete) %> 
       </li>

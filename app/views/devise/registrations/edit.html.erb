@@ -41,6 +41,21 @@
   </div>
 
   <div class="field">
+    <%= f.label :tarjeta %><br />
+    <%= f.text_field :tarjeta, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cvv %><br />
+    <%= f.text_field :cvv, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vencimiento %><br />
+    <%= f.text_field :vencimiento, autofocus: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

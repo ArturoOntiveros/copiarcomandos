@@ -101,6 +101,9 @@ ActiveRecord::Schema.define(version: 20161103140604) do
     t.string   "name"
     t.string   "gender"
     t.string   "nationality"
+    t.string   "tarjeta"
+    t.string   "cvv"
+    t.string   "vencimiento"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

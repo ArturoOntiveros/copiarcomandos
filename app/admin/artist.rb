@@ -7,12 +7,13 @@ permit_params :name, :thumbnail, :price, :cd
 	      end
 	      column "Imagen", :thumbnail
 	      column "Precio", :price
-	      column "Albumes", :albumes_del_artista do |artist|
-	      	link_to artist.albums.count, admin_artist_albums_path(artist) 
-		  end
-	      column "Canciones", :canciones_del_artista do |artist|
-	      link_to artist.songs.count, admin_artist_songs_path(artist) 
-		  end
+	      column "Audio", :audio########
+	      #column "Albumes", :albumes_del_artista do |artist|
+	      #	link_to artist.albums.count, admin_artist_albums_path(artist) 
+		  #end
+	      #column "Canciones", :canciones_del_artista do |artist|
+	      #link_to artist.songs.count, admin_artist_songs_path(artist) 
+		  #end
 	    actions
 	end
 
@@ -25,6 +26,7 @@ permit_params :name, :thumbnail, :price, :cd
 	    f.input :price
 	    f.input :cd
 	    f.input :thumbnail, :required => false, :as => :file
+	    #f.input :audio#########
 	    # Will preview the image when the object is edited
 	  end
 	  f.actions

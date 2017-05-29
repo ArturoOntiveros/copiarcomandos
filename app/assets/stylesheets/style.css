@@ -51,6 +51,10 @@ figure {
   margin: 0 0 1.8rem 0;
 }
 
+.crypto{
+  width: 500px;
+}
+
 footer{
   width: 100%;
   float: left;
@@ -424,7 +428,7 @@ Profile
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background-color: white;
+  background-image: url('avatar.jpg');
   margin-left: auto;
   margin-right: auto;
   margin-top: 80px;
@@ -477,7 +481,7 @@ Profile
   background-attachment: fixed;
   color: #a5a5a5;
   margin-top: 43px;
-  height: 800px;
+  height: 1000px;
 }
 
 .bodyeditcenter{

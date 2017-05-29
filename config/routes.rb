@@ -40,8 +40,5 @@ Rails.application.routes.draw do
 
   get 'indnew/indnew'
 
-  get 'artistas/comprar'
-
-  post 'artistas/comprar'
 
 end

@@ -6,6 +6,9 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :gender
       t.string :nationality
+      t.string :tarjeta
+      t.string :cvv
+      t.string :vencimiento
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""

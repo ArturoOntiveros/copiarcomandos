@@ -6,24 +6,37 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
     <%= stylesheet_link_tag "style" %>    
-<!--     <link rel="stylesheet" href="css/style.css"/> -->
   </head>
   <body>
     
-  <%= render 'parcials/header' %>
+    <%= render 'parcials/header' %>
 
-
-<div class="bodyp">
-    <div class="imagp">
+    <div class="bodyp">
+        <div class="imagp">
+        </div>
+          <h2 class="un">Hola <%= current_user.name %>!!!</h2> <br/>
+          <div class="crypto">
+            <ul>Tus datos están siendo protegidos:
+              <li>Contraseña: <%= current_user.encrypted_password %></li><br/>        
+              <li>Número de Tarjeta: <%= current_user.tarjeta %></li>
+                  <% r=Random.new %>
+                  <% @x = r.rand(10**30...10**50 ) + current_user.tarjeta.to_i %>
+              <li>Tarjeta cifrada: <%= @b = @x.to_s(16) %></li>
+<!--               <li>Tarjeta cifrada en binario: <%= @y = @x.to_s(2) %></li> -->
+              <li>Numero sumado: <%= r.to_s %> </li><br/>        
+              <li>CVV: <%= current_user.cvv %></li>
+                  <% t=Random.new %>
+                  <% @z = ((current_user.cvv.to_i)+ t.rand(10**30...10**50 ) )%>
+              <li>CVV cifrado: <%= @a = @z.to_s(16) %></li>
+<!--               <li>CVV cifrado en binario: <%= @c = @z.to_s(2) %> </li> -->
+              <li>Numero sumado: <%= t.to_s %> </li><br/><br/>
+              <li></li>
+            </ul>
+        </div>
     </div>
-    <h2 class="un">Usuario<%= %></h2>
-</div>
-
-
-
 
     <%= render 'parcials/footer' %>
-<!--     <script src="js/jquery.js"></script> -->
+
     <script src="/assets/menu.js"></script>
   </body>
 </html>
