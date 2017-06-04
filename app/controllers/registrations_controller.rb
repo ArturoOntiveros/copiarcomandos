@@ -1,6 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
 
 
+
+
   protected
 
   def update_resource(resource, params)
@@ -19,5 +21,8 @@ class RegistrationsController < Devise::RegistrationsController
 			:nationality, :tarjeta, :cvv, :vencimiento, :email, :password, :password_confirmation, 
 			:avatar)
 	end
+
+
+
 
 end

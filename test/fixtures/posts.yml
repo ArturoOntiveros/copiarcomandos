@@ -2,10 +2,8 @@
 
 one:
   title: MyString
-  content: MyText
-  user_id: 1
+  text: MyText
 
 two:
   title: MyString
-  content: MyText
-  user_id: 1
+  text: MyText

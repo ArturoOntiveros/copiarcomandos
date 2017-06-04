@@ -13,18 +13,22 @@
   
     <%= render 'parcials/header' %>
 
-    	<div class="object one">
+
+    	<a href="<%= cronologia_path %>"><div class="object one">
         <h1>Cronología de nuestra música</h1>
     	</div>
-    	<div class="object two">
-    		<h1>Historia de tu grupo favorito</h1>
+       </a>
+    	<a href="<%= %>"><div class="object two">
+    		<h1>Blog AcetatosMX</h1>
     	</div>
-    	<div class="object three">
-    		<h1>Lo nuevo en AcetatosMX</h1>
+    	<a href="<%= noticias_path %>"><div class="object three">
+    		<h1>Lo nuevo en la Música</h1>
     	</div>
-    	<div class="object four">
+      </a>
+    	<a href="<%= preguntas_path %>"><div class="object four">
     		<h1>Preguntas frecuentes</h1>
     	</div>
+      </a>
 
     <%= render 'parcials/footer' %>
       

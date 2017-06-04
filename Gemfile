@@ -30,6 +30,9 @@ gem 'active_skin'
 gem 'paperclip', '~> 4.3', '>= 4.3.7'
 # Use ActiveModel has_secure_password
 gem "bcrypt", "~> 3.1.1"
+gem "pdfkit"
+gem "figaro"
+gem "letter_opener"
 # Use Unicorn as the app server
 # gem 'unicorn'
 

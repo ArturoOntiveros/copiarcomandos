@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>    
+<!--     <link rel="stylesheet" href="css/style.css"/> -->
+  </head>
+
+  <body>
+  
+    <%= render 'parcials/header' %>
+
+
+    <div class="blogbn">
+      <div class="blogn">
+      <div class="cuadrito">
+      </br></br>
+			<h1>Nueva Publicación</h1>
+
+			<%= render 'form' %>
+
+			<%= link_to 'Regresar', articles_path %></p>
+</br></br></br>
+</div>
+			    
+		
+	  </div>
+	</div>
+
+      
+      <script src="/assets/menu.js"></script>
+      <%= render 'parcials/footer' %>
+  </body>
+</html>

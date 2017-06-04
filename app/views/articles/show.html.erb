@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag "style" %>    
+<!--     <link rel="stylesheet" href="css/style.css"/> -->
+  </head>
+
+  <body>
+  
+    <%= render 'parcials/header' %>
+
+    <div class="blogbn">
+    <div class="blogns">
+    <div class="cuadrito">
+
+    <p id="notice"><%= notice %></p>
+</br></br>
+
+<h2>Comentario creado exitosamente!</h2>
+</br>
+<p>
+  <strong>Cretor:</strong>
+  <%= @article.cretor %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @article.body %>
+</p>
+
+<%= link_to 'Editar', edit_article_path(@article) %> |
+<%= link_to 'Regresar', articles_path %>
+    </div>
+    </div>
+    </div>
+    <%= render 'parcials/footer' %>
+
+      
+      <script src="/assets/menu.js"></script>
+  </body>
+</html>

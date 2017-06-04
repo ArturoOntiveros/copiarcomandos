@@ -22,7 +22,7 @@ permit_params :title, :composer, :time, :album_id, :audio
 	    f.input :title
 	    f.input :composer
 	    f.input :time
-	    f.input :audio, :required => false, :as => :file
+	    f.input :audio, :required => true, :as => :file
 	    # Will preview the image when the object is edited
 	  end
 	  f.actions

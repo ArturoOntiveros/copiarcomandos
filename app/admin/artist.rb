@@ -26,7 +26,7 @@ permit_params :name, :thumbnail, :price, :cd
 	    f.input :price
 	    f.input :cd
 	    f.input :thumbnail, :required => false, :as => :file
-	    #f.input :audio#########
+	    	#f.input :audio, :required => false, as#########
 	    # Will preview the image when the object is edited
 	  end
 	  f.actions
@@ -36,6 +36,7 @@ permit_params :name, :thumbnail, :price, :cd
 	    row :name
 	    row :price
 	    row :cd
+	    row :audio###########
 	    row :thumbnail do
 	      image_tag(ad.thumbnail.url(:thumb))
 	    end

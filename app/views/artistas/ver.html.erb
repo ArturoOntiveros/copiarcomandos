@@ -5,6 +5,8 @@
     <title>AcetatosMX - Tienda en línea para los mejores acetatos</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"/>
     <link rel="stylesheet" href="https://file.myfontastic.com/2mkBAz4kVSMEZcWv2q3x2K/icons.css"/>
+    <%= stylesheet_link_tag('default', :media => :screen)%><!---->
+    <%= stylesheet_link_tag('print', :media => :print)%><!---->
     <%= stylesheet_link_tag "style" %>
     <!--Slider-->
     <link rel="stylesheet" href="/assets/flexslider.css" type="text/css">
@@ -26,17 +28,24 @@
 
                 <div class="artistas">
                   <div class="artista__imagen"><img src="<%= @artist.thumbnail %>" alt=""/></div>
+
+
+<audio controls="controls">
+  <source src="" type="audio/ogg" />
+</audio>
+                  
+
                   <div class="artista__nombre">
                     <h2><%= @artist.name %></h2>
                     <h2><%= @artist.price %></h2>
                   </div>
                     
+
                   </br >
-                  <audio controls autoplay>
-                    <source src="" type="audio/mpeg">
-                    if you
-                  </audio>
-                    </br>
+                   
+                  </br>
+
+
                 </div>
 
     <div class="top">

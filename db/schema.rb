@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103140604) do
+ActiveRecord::Schema.define(version: 20170604164341) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -42,6 +42,14 @@ ActiveRecord::Schema.define(version: 20161103140604) do
 
   add_index "albums", ["artist_id"], name: "index_albums_on_artist_id"
 
+  create_table "articles", force: :cascade do |t|
+    t.string   "cretor"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.string   "price"
@@ -52,6 +60,13 @@ ActiveRecord::Schema.define(version: 20161103140604) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+  end
+
+  create_table "comentarios", force: :cascade do |t|
+    t.integer  "Article_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|

@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :comentarios
+  resources :articles
+  get 'preguntas/frecuentes'
+
+  get 'nuevo/noticias'
+
+  get 'cultura/cronologia'
+
   resources :posts do
     resources :comments
   end
@@ -37,6 +45,12 @@ Rails.application.routes.draw do
   get 'profile/profile'
 
   get 'new/new'
+
+  get 'cultura/cronologia', to: 'cultura#cronologia', as: 'cronologia' 
+
+  get 'nuevo/noticias', to: 'nuevo#noticias', as: 'noticias'   
+
+  get 'preguntas/frecuentes', to: 'preguntas#frecuentes', as: 'preguntas'   
 
   get 'indnew/indnew'
 
